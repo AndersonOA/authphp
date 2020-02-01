@@ -44,3 +44,13 @@ function flash(string $type = null, string $message = null): ?string
 
     return null;
 }
+
+
+/**
+ * @param string $imageUrl
+ * @return string
+ */
+function routeImage(string $imageUrl): string
+{
+    return "http://via.placeholder.com/1200x628/0984e3/FFFFFF?text={$imageUrl}";
+}

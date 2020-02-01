@@ -8,7 +8,7 @@ define("SITE", [
     "desc" => "Aprenda a construir uma aplicação de autenticação em MVC com PHP do Jeito Certo",
     "domain" => "localauth.com",
     "locale" => "pt_BR",
-    "root" => "https://localhost/codigoaberto/t1"
+    "root" => "https://localhost/authphp/codigoaberto/t1"
 ]);
 
 /**
@@ -42,7 +42,7 @@ define("DATA_LAYER_CONFIG", [
 define("SOCIAL", [
     "facebook_page" => "makersit",
     "facebook_author" => "anderson.o.aristides",
-    "facebook_appId" => "",
+    "facebook_appId" => "232323232323",
     "twitter_creator" => "@aoaristides",
     "twitter_site" => "@aoaristides"
 ]);
