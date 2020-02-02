@@ -54,7 +54,7 @@ define("MAIL", [
     "host" => "smtp.sendgrid.net",
     "port" => "587",
     "user" => "apikey",
-    "passwd" => "************",
+    "passwd" => "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",
     "from_name" => "Anderson O. Aristides",
     "from_email" => "contato@makersweb.com.br"
 ]);
@@ -62,9 +62,18 @@ define("MAIL", [
 /**
  * SOCIAL LOGIN: FACEBOOK
  */
-define("FACEBOOK_LOGIN", []);
+define("FACEBOOK_LOGIN", [
+    "clientId" => "2385512085092614",
+    "clientSecret" => "6d45775b5db97723183f188272c55849",
+    "redirectUri" => SITE["root"] . "/facebook",
+    "graphApiVersion"  => "v5.0"
+]);
 
 /**
  * SOCIAL LOGIN: GOOGLE
  */
-define("GOOGLE_LOGIN", []);
+define("GOOGLE_LOGIN", [
+    "clientId" => "61561568847-cgi3ccpb13pu6t301g8v00qfshst3gsp.apps.googleusercontent.com",
+    "clientSecret" => "dQdN-bkWn_YTDWdcX1_03NEq",
+    "redirectUri" => SITE["root"] . "/google"
+]);
