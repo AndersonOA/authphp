@@ -54,7 +54,7 @@ define("MAIL", [
     "host" => "smtp.sendgrid.net",
     "port" => "587",
     "user" => "apikey",
-    "passwd" => "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",
+    "passwd" => "************",
     "from_name" => "Anderson O. Aristides",
     "from_email" => "contato@makersweb.com.br"
 ]);
