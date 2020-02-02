@@ -40,11 +40,11 @@ define("DATA_LAYER_CONFIG", [
  * SOCIAL CONFIG
  */
 define("SOCIAL", [
-    "facebook_page" => "makersit",
-    "facebook_author" => "anderson.o.aristides",
-    "facebook_appId" => "232323232323",
-    "twitter_creator" => "@aoaristides",
-    "twitter_site" => "@aoaristides"
+    "facebook_page" => "",
+    "facebook_author" => "",
+    "facebook_appId" => "",
+    "twitter_creator" => "",
+    "twitter_site" => ""
 ]);
 
 /**
@@ -54,7 +54,7 @@ define("MAIL", [
     "host" => "smtp.sendgrid.net",
     "port" => "587",
     "user" => "apikey",
-    "passwd" => "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",
+    "passwd" => "",
     "from_name" => "Anderson O. Aristides",
     "from_email" => "contato@makersweb.com.br"
 ]);
@@ -63,8 +63,8 @@ define("MAIL", [
  * SOCIAL LOGIN: FACEBOOK
  */
 define("FACEBOOK_LOGIN", [
-    "clientId" => "2385512085092614",
-    "clientSecret" => "6d45775b5db97723183f188272c55849",
+    "clientId" => "",
+    "clientSecret" => "",
     "redirectUri" => SITE["root"] . "/facebook",
     "graphApiVersion"  => "v5.0"
 ]);
@@ -73,7 +73,7 @@ define("FACEBOOK_LOGIN", [
  * SOCIAL LOGIN: GOOGLE
  */
 define("GOOGLE_LOGIN", [
-    "clientId" => "61561568847-cgi3ccpb13pu6t301g8v00qfshst3gsp.apps.googleusercontent.com",
-    "clientSecret" => "dQdN-bkWn_YTDWdcX1_03NEq",
+    "clientId" => "",
+    "clientSecret" => "",
     "redirectUri" => SITE["root"] . "/google"
 ]);
