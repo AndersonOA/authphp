@@ -4,17 +4,28 @@
 namespace Source\Controllers;
 
 
+/**
+ * Class Web
+ * @package Source\Controllers
+ */
 class Web extends Controller
 {
+    /**
+     * Web constructor.
+     * @param $router
+     */
     public function __construct($router)
     {
         parent::__construct($router);
 
-        if (!empty($_SESSION["user"])) {
+        /*if (!empty($_SESSION["user"])) {
             $this->router->redirect("app.home");
-        }
+        }*/
     }
 
+    /**
+     *
+     */
     public function login(): void
     {
         $head = $this->seo->optimize(
@@ -29,6 +40,9 @@ class Web extends Controller
         ]);
     }
 
+    /**
+     *
+     */
     public function register(): void
     {
         $head = $this->seo->optimize(
@@ -50,6 +64,9 @@ class Web extends Controller
         ]);
     }
 
+    /**
+     *
+     */
     public function forget(): void
     {
         $head = $this->seo->optimize(
@@ -64,6 +81,9 @@ class Web extends Controller
         ]);
     }
 
+    /**
+     * @param $data
+     */
     public function reset($data): void
     {
         $head = $this->seo->optimize(
@@ -78,6 +98,9 @@ class Web extends Controller
         ]);
     }
 
+    /**
+     * @param $data
+     */
     public function error($data): void
     {
         $error = filter_var($data["errcode"], FILTER_VALIDATE_INT);

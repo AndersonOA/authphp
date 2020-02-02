@@ -43,6 +43,6 @@ abstract class Controller
      */
     public function ajaxResponse(string $param, array $values): string
     {
-        require json_encode([$param => $values]);
+        return json_encode([$param => $values]);
     }
 }
