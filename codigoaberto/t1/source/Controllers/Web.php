@@ -4,6 +4,8 @@
 namespace Source\Controllers;
 
 
+use Source\Models\User;
+
 /**
  * Class Web
  * @package Source\Controllers
@@ -65,10 +67,31 @@ class Web extends Controller
     }
 
     /**
-     *
+     * @param $data
      */
-    public function forget(): void
+    public function forget($data): void
     {
+        if (empty($_SESSION["forget"])) {
+            flash("info", "Informe seu E-MAIL para recuperar a senha.");
+            $this->router->route("web.forget");
+        }
+
+        $email = filter_var($data["email"], FILTER_VALIDATE_EMAIL);
+        $forget = filter_var($data["forget"], FILTER_DEFAULT);
+
+        $errForget = "Não foi possível recuperar, tente novamente.";
+
+        if (!$email || $forget) {
+            flash("error", $errForget);
+            $this->router->route("web.forget");
+        }
+
+        $user = (new User())->find("email = :e AND forget = :f", "e={$email}&f={$forget}")->fetch();
+        if (!$user) {
+            flash("error", $errForget);
+            $this->router->route("web.forget");
+        }
+
         $head = $this->seo->optimize(
             "Crie Sua Nova Senha | " . site("name"),
             site("desc"),
